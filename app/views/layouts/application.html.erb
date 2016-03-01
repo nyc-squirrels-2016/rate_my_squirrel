@@ -7,6 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <h1>RATE MY SQUIRREL</h1>
+    <% if logged_in? %>
+    <p>Welcome, <%= current_user.username %> | <a href="#">Logout</a></p>
+    <% else %>
+    <p><a href="/login">Log in</a> | <a href="/users/new">Register</a></p>
+    <% end %>
+  </header>
 
 <%= yield %>
 
