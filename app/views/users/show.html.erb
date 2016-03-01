@@ -1,0 +1,15 @@
+<fieldset>
+  <legend><h2><%= @user.username %></h2></legend>
+  <div>
+    <p class="profile_header">Hometown:</p>
+    <p><%= @user.hometown %></p>
+  </div>
+  <div>
+    <p class="profile_header">Bio:</p>
+    <p><%= @user.bio %></p>
+  </div>
+  <div>
+    <p class="profile_header">Average rating of <%= @user.username %>'s photos:</p>
+    <p><%= @average %></p>
+  </div>
+</fieldset>
