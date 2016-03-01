@@ -15,6 +15,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+    @average = @user.overall_avg
+  end
+
   private
   def user_params
     params.require(:user).permit(:username, :email, :hometown, :bio, :password)

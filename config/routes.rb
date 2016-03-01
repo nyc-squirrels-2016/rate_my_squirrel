@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :show]
   resources :photos do
     resources :ratings, only: [:create]
   end

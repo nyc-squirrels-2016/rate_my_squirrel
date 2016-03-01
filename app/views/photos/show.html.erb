@@ -1,4 +1,5 @@
 <h2><%= @photo.title %></h2>
+<%= link_to @photo.user.username, user_path(@photo.user) %>
 <%= image_tag @photo.url %>
 <% if logged_in? && current_user == @photo.user %>
   <%= link_to 'Edit photo', edit_photo_path %>
@@ -28,5 +29,5 @@
     <%= f.radio_button :value, 10 %>
     <%= f.submit 'Rate' %>
   <% end %>
-  <span id="ratings_box"><%= @average %></span>
+  <span id="ratings_box">Average rating: <%= @average %></span>
 </fieldset>
