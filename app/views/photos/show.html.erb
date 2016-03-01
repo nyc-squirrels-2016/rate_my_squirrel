@@ -1,7 +1,31 @@
 <h2><%= @photo.title %></h2>
 <%= image_tag @photo.url %>
-<a href="#">Ratings form will go here</a>
 <% if logged_in? && current_user == @photo.user %>
   <%= link_to 'Edit photo', edit_photo_path %>
   <%= link_to 'Delete photo', "/photos/#{@photo.id}", method: :delete %>
 <% end %>
+<fieldset><legend>Rate this squirrel</legend>
+  <%= form_for [@photo, @photo.ratings.new] do |f| %>
+    <%= f.label '1' %>
+    <%= f.radio_button :value, 1 %>
+    <%= f.label '2' %>
+    <%= f.radio_button :value, 2 %>
+    <%= f.label '3' %>
+    <%= f.radio_button :value, 3 %>
+    <%= f.label '4' %>
+    <%= f.radio_button :value, 4 %>
+    <%= f.label '5' %>
+    <%= f.radio_button :value, 5 %>
+    <%= f.label '6' %>
+    <%= f.radio_button :value, 6 %>
+    <%= f.label '7' %>
+    <%= f.radio_button :value, 7 %>
+    <%= f.label '8' %>
+    <%= f.radio_button :value, 8 %>
+    <%= f.label '9' %>
+    <%= f.radio_button :value, 9 %>
+    <%= f.label '10' %>
+    <%= f.radio_button :value, 10 %>
+    <%= f.submit 'Rate' %>
+  <% end %>
+</fieldset>
