@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resources :photos, only: [:index]
   root 'photos#index'
-  get '/login' => 'sessions#loginpage'
-  post '/login' => 'sessions#login'
-  post '/logout' => 'sessions#logout'
+  resource :session, only: [:new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
