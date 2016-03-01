@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>RATE MY SQUIRREL</h1>
+    <h1><%= link_to 'RATE MY SQUIRREL', root_path %></h1>
     <% if logged_in? %>
     <p>Welcome, <%= current_user.username %> | <%= link_to 'Log out', '/session', method: :delete %></p>
     <% else %>
