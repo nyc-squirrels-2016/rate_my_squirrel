@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
-  resources :photos, only: [:index]
+  resources :photos, only: [:index, :show]
+  resources :ratings, only: [:create]
   root 'photos#index'
   resource :session, only: [:new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
