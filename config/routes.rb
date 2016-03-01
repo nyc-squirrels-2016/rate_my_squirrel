@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
-  resources :photos, only: [:index, :show, :new, :create, :destroy]
+  resources :photos#, except: [ :update]
   resources :ratings, only: [:create]
   root 'photos#index'
   resource :session, only: [:new, :create, :destroy]

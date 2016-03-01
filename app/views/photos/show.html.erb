@@ -2,5 +2,6 @@
 <%= image_tag @photo.url %>
 <a href="#">Ratings form will go here</a>
 <% if logged_in? && current_user == @photo.user %>
+  <%= link_to 'Edit photo', edit_photo_path %>
   <%= link_to 'Delete photo', "/photos/#{@photo.id}", method: :delete %>
 <% end %>
