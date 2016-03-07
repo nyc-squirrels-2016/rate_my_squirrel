@@ -1,9 +1,11 @@
-<h2><%= @photo.title %></h2>
-<%= link_to @photo.user.username, user_path(@photo.user) %>
+<div id="photo_banner">
+    <h2><%= @photo.title %></h2>
+    <%= link_to @photo.user.username, user_path(@photo.user), id:"photo_user_link" %>
+</div>
 <%= image_tag @photo.url %>
 <% if logged_in? && current_user == @photo.user %>
-  <%= link_to 'Edit photo', edit_photo_path %>
-  <%= link_to 'Delete photo', "/photos/#{@photo.id}", method: :delete %>
+  <%= link_to 'Edit photo', edit_photo_path, class: "admin_command" %>
+  <%= link_to 'Delete photo', "/photos/#{@photo.id}", method: :delete, class: "admin_command" %>
 <% end %>
 <fieldset><legend>Rate this squirrel</legend>
   <%= form_for [@photo, @photo.ratings.new] do |f| %>
