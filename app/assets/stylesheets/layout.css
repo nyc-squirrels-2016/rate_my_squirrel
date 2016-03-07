@@ -1,0 +1,53 @@
+html {
+  height: 100%;
+  background: linear-gradient(#404040, #808080);
+  background-attachment: fixed;
+}
+body {
+  height: 100%;
+  width: 50%;
+  margin: 0 24% 0 24%;
+  background-color: #FFFFFF;
+}
+h1 {
+  max-width: 50%;
+  display: inline;
+  font-size: 2em;
+}
+h1 a {
+  text-decoration: none;
+  color: #404040;
+}
+header {
+  height: 3em;
+}
+#authentication_bar {
+  margin-top: 0.5em;
+  height:1em;
+  max-width: 50%;
+  float: right;
+}
+#authentication_bar p {
+  margin: 0;
+}
+.form_list {
+  list-style: none;
+}
+.form_list label {
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 150px;
+  text-align: right;
+}
+.form_list input {
+  display: inline-block;
+  float: left;
+}
+.form_list textarea {
+  display: inline-block;
+  float: left;
+}
+a {
+  color: #404040;
+}

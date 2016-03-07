@@ -1,33 +1,35 @@
 <fieldset>
   <legend>Register</legend>
   <%= form_for @user do |f| %>
-  <div>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-  </div>
-  <div>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= f.label :hometown %>
-    <%= f.text_field :hometown %>
-  </div>
-  <div>
-    <%= f.label :bio %>
-    <%= f.text_area :bio %>
-  </div>
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div>
-    <%= f.submit 'Register' %>
-  </div>
+  <ul class="form_list">
+    <li>
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+    </li>
+    <li>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </li>
+    <li>
+      <%= f.label :hometown %>
+      <%= f.text_field :hometown %>
+    </li>
+    <li>
+      <%= f.label :bio %>
+      <%= f.text_area :bio %>
+    </li>
+    <li>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </li>
+    <li>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+    </li>
+    <li>
+      <%= f.submit 'Register' %>
+    </li>
+  </ul>
   <% end %>
 </fieldset>
 
