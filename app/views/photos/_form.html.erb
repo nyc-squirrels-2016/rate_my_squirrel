@@ -1,13 +1,15 @@
 <%= form_for @photo do |f| %>
-  <div>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-  <div>
-    <%= f.label :url %>
-    <%= f.text_field :url %>
-  </div>
-  <div>
-    <%= f.submit 'Save' %>
-  </div>
+  <ul class="form_list">
+    <li>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </li>
+    <li>
+      <%= f.label :url %>
+      <%= f.text_field :url %>
+    </li>
+    <li>
+      <%= f.submit 'Save' %>
+    </li>
+  </ul>
 <% end %>

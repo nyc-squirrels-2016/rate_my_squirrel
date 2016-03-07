@@ -9,14 +9,14 @@
 <body>
   <header>
     <h1><%= link_to 'RATE MY SQUIRREL', root_path %></h1>
-    <% if logged_in? %>
-    <p>Welcome, <%= current_user.username %> | <%= link_to 'Log out', '/session', method: :delete %></p>
-    <% else %>
-    <p><a href="/session/new">Log in</a> | <a href="/users/new">Register</a></p>
-    <% end %>
+    <span id="authentication_bar">
+      <% if logged_in? %>
+      <p>Welcome, <%= current_user.username %> | <%= link_to 'Log out', '/session', method: :delete %></p>
+      <% else %>
+      <p><a href="/session/new">Log in</a> | <a href="/users/new">Register</a></p>
+      <% end %>
+    </span>
   </header>
-
 <%= yield %>
-
 </body>
 </html>
