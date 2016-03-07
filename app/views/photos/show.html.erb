@@ -7,27 +7,13 @@
 <% end %>
 <fieldset><legend>Rate this squirrel</legend>
   <%= form_for [@photo, @photo.ratings.new] do |f| %>
-    <%= f.label '1' %>
-    <%= f.radio_button :value, 1 %>
-    <%= f.label '2' %>
-    <%= f.radio_button :value, 2 %>
-    <%= f.label '3' %>
-    <%= f.radio_button :value, 3 %>
-    <%= f.label '4' %>
-    <%= f.radio_button :value, 4 %>
-    <%= f.label '5' %>
-    <%= f.radio_button :value, 5 %>
-    <%= f.label '6' %>
-    <%= f.radio_button :value, 6 %>
-    <%= f.label '7' %>
-    <%= f.radio_button :value, 7 %>
-    <%= f.label '8' %>
-    <%= f.radio_button :value, 8 %>
-    <%= f.label '9' %>
-    <%= f.radio_button :value, 9 %>
-    <%= f.label '10' %>
-    <%= f.radio_button :value, 10 %>
-    <%= f.submit 'Rate' %>
+  <% counter = 1 %>
+      <% while counter <= 10 %>
+        <%= f.label "#{counter}" %>
+        <%= f.radio_button :value, counter %>
+        <% counter += 1 %>
+      <% end %>
+        <%= f.submit 'Rate' %>
   <% end %>
   <span id="ratings_box">Average rating: <%= @average %></span>
 </fieldset>
