@@ -1,0 +1,48 @@
+img {
+  max-width: 100%;
+}
+#photo_user_link {
+  display: block;
+}
+.admin_command {
+  display: inline;
+}
+#photo_banner{
+  margin: 2em 0 0 0;
+}
+#photo_banner h2 {
+  display: inline;
+  max-width: 74%;
+  float: left;
+  margin: 0;
+}
+#photo_banner a {
+  display: inline;
+  width: 25%;
+  float: left;
+  margin: 0.3em 0 0.2em 1em;
+}
+.index_link {
+  max-width: 50%;
+  margin: 0 24% 0 24%;
+  text-align: center;
+}
+.index_thumbnail {
+  max-width: 50%;
+  margin: 0 24% 0 24%;
+  text-align: center;
+}
+#new_photo_button {
+  text-align: center;
+  background-color: #404040;
+  width: 10em;
+  height: 2em;
+  border-radius: 5px;
+  margin-left: 2em;
+}
+#new_photo_button a {
+  display: block;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  text-decoration: none;
+}
