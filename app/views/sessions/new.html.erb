@@ -1,12 +1,14 @@
 <%= form_tag session_path %>
-  <div>
+<ul class="form_list">
+  <li>
     <%= label_tag :username %>
     <%= text_field_tag :username %>
-  </div>
-  <div>
+  </li>
+  <li>
     <%= label_tag :password %>
     <%= password_field_tag :password %>
-  </div>
-  <div>
+  </li>
+  <li>
     <%= submit_tag 'Log in' %>
-  </div>
+  </li>
+</ul>
